@@ -18,4 +18,14 @@ public class MainActivity extends AppCompatActivity {
         Intent toLog = new Intent (this,LogActivity.class);
         startActivity(toLog);
     }
+
+    public void goToNormalActivity(View view) {
+        Intent toNormal = new Intent (this, NormalActivity .class);
+        startActivity(toNormal);
+    }
+
+    public void goToMechanismActivity(View view) {
+        Intent toMechanism = new Intent (this, MechanismActivity .class);
+        startActivity(toMechanism);
+    }
 }
