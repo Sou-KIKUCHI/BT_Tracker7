@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">BT_Tracker7</string>
+    <string name="log_body_temperature">Log Body temperature</string>
+    <string name="check_normal_range">Check Normal Range</string>
+    <string name="mechanism_of_fever">Mechanism of fever</string>
+    <string name="handling_fever">Handling Fever</string>
 </resources>
