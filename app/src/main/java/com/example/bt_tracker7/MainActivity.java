@@ -15,51 +15,31 @@ import android.widget.TextView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements
-View.OnClickListener {
-
+public class MainActivity extends AppCompatActivity {
     @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.MainButton1:
-                Intent toLog = new Intent(this, LogActivity.class);
-                startActivity(toLog);
-                break;
-            case R.id.MainButton2:
-                Intent toNormal = new Intent(this, NormalActivity.class);
-                startActivity(toNormal);
-                break;
-            case R.id.MainButton3:
-                Intent toMechanism = new Intent(this, MechanismActivity.class);
-                startActivity(toMechanism);
-                break;
-            case R.id.MainButton4:
-                Intent openFeverLink = new Intent(Intent.ACTION_VIEW,
-                        Uri.parse("https://www.healthline.com/health/how-to-break-a-fever"));
-                //Verify that the intent openFeverLink will resolve properly
-                if (openFeverLink.resolveActivity(getPackageManager()) != null) {
-                }
-                break;
-        }
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        createNotificationChannel();
     }
 
     public void goToLogActivity(View view) {
-        Intent toLog = new Intent (this,LogActivity.class);
+        Intent toLog = new Intent(this, LogActivity.class);
         startActivity(toLog);
     }
 
     public void goToNormalActivity(View view) {
-        Intent toNormal = new Intent (this, NormalActivity .class);
+        Intent toNormal = new Intent(this, NormalActivity.class);
         startActivity(toNormal);
     }
 
     public void goToMechanismActivity(View view) {
-        Intent toMechanism = new Intent (this, MechanismActivity .class);
+        Intent toMechanism = new Intent(this, MechanismActivity.class);
         startActivity(toMechanism);
     }
 
     public void goToHandlingActivity(View view) {
-        Intent toHandling = new Intent (this, HandlingActivity .class);
+        Intent toHandling = new Intent(this, HandlingActivity.class);
         startActivity(toHandling);
     }
 
@@ -74,25 +54,26 @@ View.OnClickListener {
         //will only fire when alarm triggers
         PendingIntent pd = PendingIntent.getBroadcast(this, 0, intent, 0);
         //create an AlarmManager
-        AlarmManager alarmManager=(AlarmManager)
-                getSystemService(ALARM_SERVICE);
+        AlarmManager alarmManager =
+                (AlarmManager) getSystemService(ALARM_SERVICE);
         //Repeating interval for the alarmManager is set to 6 second
         //for demonstration purpose
         //In real world application, users may want to get daily reminder
         //In that case, set the interval to 1000 * 60 * 60 * 24
-        long interval = 1000*6;
+        long interval = 1000 * 6;
         //set up a repeating alarm so that the notification reminder
         //gets fired at the set interval
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,
                 System.currentTimeMillis(), interval, pd);
 
     }
-    private void createNotificationChannel1(){
+
+    private void createNotificationChannel() {
         //First, check SDK version
         //Create notification channel only if SDK version > Android 8 Oreo
         //CAUTION: It's Oreo's O, not number 0!!!
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            String channelID = "BT_Tracker_channel";
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            String channelID = "BT_Tracker_Channel";
             String channelName = "BTTrackerReminderChannel";
             String channelDescription = "Channel for BT Tracker reminder";
             int importance = NotificationManager.IMPORTANCE_DEFAULT;

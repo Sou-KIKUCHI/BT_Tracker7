@@ -9,4 +9,5 @@
     <string name="normal_human_body_temperature_is_between_36_0_and_37_5">Normal Human Body temperature is between 36.0 and 37.5</string>
     <string name="please_log_your_temperature_today">Please log your temperature today</string>
     <string name="save">Save</string>
+    <string name="set_reminder">Set Reminder</string>
 </resources>
