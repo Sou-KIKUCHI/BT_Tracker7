@@ -38,9 +38,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(toMechanism);
     }
 
-    public void goToHandlingActivity(View view) {
-        Intent toHandling = new Intent(this, HandlingActivity.class);
-        startActivity(toHandling);
+    public void openFeverHandlingWebsite(View view) {
+        Intent openLink = new Intent(Intent.ACTION_VIEW,
+                Uri.parse("https://www.healthline.com/health/how-to-break-a-fever"));
+        startActivity(openLink);
     }
 
     public void setReminder(View view) {

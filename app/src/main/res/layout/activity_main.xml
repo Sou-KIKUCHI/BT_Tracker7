@@ -118,10 +118,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#009688"
-            android:onClick="goToHandlingActivity"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="@string/handling_fever"
+            android:onClick="openFeverHandlingWebsite"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="#FFFFFF" />
 
