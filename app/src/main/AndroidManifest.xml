@@ -14,7 +14,6 @@
             android:enabled="true"
             android:exported="true"></receiver>
 
-        <activity android:name=".HandlingActivity" />
         <activity android:name=".MechanismActivity" />
         <activity android:name=".NormalActivity" />
         <activity android:name=".LogActivity" />
@@ -26,5 +25,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>
