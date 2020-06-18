@@ -3,6 +3,7 @@ package com.example.bt_tracker7;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 
 public class LogActivity extends AppCompatActivity {
 

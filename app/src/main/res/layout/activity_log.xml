@@ -24,18 +24,23 @@
         android:id="@+id/LogSaveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#ffcdb2"
         android:text="@string/save"
+        android:textColor="#d90429"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="OnClick" />
 
     <EditText
         android:id="@+id/LogInputData"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#ffcdb2"
         android:ems="10"
         android:inputType="numberDecimal"
+        android:textColor="#d90429"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
