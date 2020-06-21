@@ -158,7 +158,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //gets fired at the set interval
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,
                 System.currentTimeMillis(), interval, pd);
-
-
     }
 }

@@ -67,7 +67,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="#FFFFFF"
             tools:layout_editor_absoluteX="-181dp"
-            tools:layout_editor_absoluteY="256dp"/>
+            tools:layout_editor_absoluteY="256dp" />
 
         <View
             android:id="@+id/view"
