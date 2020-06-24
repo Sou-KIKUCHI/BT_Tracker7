@@ -27,6 +27,7 @@
         android:background="#ffcdb2"
         android:text="@string/save"
         android:textColor="#d90429"
+        android:onClick="confirmBT"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
